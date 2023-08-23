@@ -1,0 +1,41 @@
+<section id="group">
+<div class="group-container">
+    <div class="info-card">
+        <h2>
+            <a href="/groups/{{group.id}}">{{group.group_name}}</a>
+        </h2>
+        <p>Description: {{group.group_description}}</p>
+        <p>
+            Study Topic: {{group.topic.topic_name}}!
+        </p>
+        <p>
+            Skill Level: {{group.skill_level}}
+        </p>
+        <p>
+            Time to Meet: {{group.meet_time}}
+        </p>
+        <p>
+            Created by: {{users2.user.first_name}} {{users2.user.last_name}}
+        </p>
+        <p>
+            Meeting Link <a href="{{group.zoom_link}}">{{group.zoom_link}}</a>
+        </p>
+    
+    <div id= "group_{{group.id}}">
+        <button class="button has-background-info-dark has-text-white" id="enroll_user">Join Group</button>
+    </div>
+    <div id="enroll-success" class="has-text-success"></div>
+
+    <div>
+        <label class="label" for="user_names">Group Members: </label>
+        <select class="select" name="user_names" id="user_names">
+            {{!-- {{#unless enrollments.users.id}} --}}
+            {{#each users.group_id as |user|}}<option value="{{user.id}}">{{user.first_name}} {{user.last_name}} | {{user.user_name}} </option>{{/each}}
+            {{!-- {{/unless}} --}}
+        </select>
+    </div>
+    </div>
+</div>
+</section>
+
+<script src="/js/enrollments.js"></script>

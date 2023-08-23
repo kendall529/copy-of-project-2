@@ -1,0 +1,56 @@
+:root {
+    --bg-color: #2D3142;
+    --text-color: #b5b5b5;
+    /* --main-color: #26c1d2; */
+    --main-color: #1D72AA;
+    --dark-color: #2D3142;
+    --highlight-color: rgba(0, 0, 0, 0.462);
+
+}
+
+#login {
+    height: 100vh;
+    padding-top: 10rem;
+}
+
+.login-form {
+    margin: auto;
+}
+
+.login-form .button {
+    margin-top: 1rem;
+    color: var(--text-color);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.login-container .hr {
+    border: 2px solid --text-color;
+}
+
+.login-card {
+    flex-wrap: wrap;
+    min-width: 300px;
+    /* flex-grow: 1; New property to make the card grow to the maximum space available */
+    /* flex-basis: 0; New property to set the initial main size of the flex item to 0 */
+    /* flex: 1 1 25rem; */
+}
+
+.signup-form {
+    margin: auto;
+}
+
+.signup-form .button {
+    margin-top: 1rem;
+    color: var(--text-color);
+}
+
+#login .button:hover {
+    color: var(--dark-color);
+}

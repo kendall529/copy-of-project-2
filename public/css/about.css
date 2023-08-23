@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #2D3142;
+    --text-color: #b5b5b5;
+    /* --main-color: #26c1d2; */
+    --main-color: #1D72AA;
+    --dark-color: #2D3142;
+    --highlight-color: rgba(0, 0, 0, 0.405);
+
+}
+
+.about {
+  min-height: auto;
+  padding-bottom: 7rem;
+  padding-top: 20vh;
+  margin-top: 10vh;
+}
+
+.about h2 {
+    margin-bottom: 5rem;
+}
+
+.about .about-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* New property to ensure all items stretch to the same height */
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+.about-card-container .about-card {
+  display: flex; /* New property to make the card content flex items */
+  flex-direction: column; /* New property to orient the card content vertically */
+  flex-grow: 1; /* New property to make the card grow to the maximum space available */
+  flex-basis: 0; /* New property to set the initial main size of the flex item to 0 */
+  flex: 1 1 25rem;
+  background: var(--bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 .1rem .5rem var(--highlight-color);
+  text-align: center;
+  /* border-top: .6rem solid var(--main-color); */
+  /* border-bottom: .6rem solid var(--main-color); */
+  transition: 0.5s ease;
+}
+
+.about-card-container .about-card:hover {
+  box-shadow: 0 0.1rem 1.5rem var(--highlight-color);
+  transform: scale(1.02);
+}
+
+.about-card i {
+  font-size: 7rem;
+  color: var(--main-color);
+}
+
+.about-card h3 {
+  font-size: clamp(1.5rem, 6vw, 2.6rem);
+  transition: 0.5s ease;
+}
+
+.about-card:hover h3 {
+  color: var(--main-color);
+}
+
+.about-card p {
+  font-size: clamp(1rem, 4vw, 1.6rem);
+  margin: 1rem 0 3rem;
+}
+
+.about-card {
+
+}
+
+.about-card:nth-child(1) {
+  background-image: url(/images/past.avif);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(69, 69, 69, 0.57);
+}
+
+.about-card:nth-child(2) {
+  background-image: url(/images/present.avif);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(69, 69, 69, 0.57);
+}
+
+.about-card:nth-child(3) {
+  background-image: url(/images/future.avif);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(53, 53, 53, 0.57);
+}
+
+@media (max-width: 400px) {
+  .about-card:nth-child(3) {
+    background-color:  rgba(0, 0, 0, 0.57);
+  }
+}

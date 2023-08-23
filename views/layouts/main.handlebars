@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Group Maker</title>
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- bulma css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/groups_list.css">
+    <link rel="stylesheet" href="/css/group.css">
+</head>
+
+<body>
+    <section class="hero has-background-info-dark is-medium">
+        <div class="hero-head">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a id="logo" class="navbar-item is-size-4" href="/">Study Group Maker</a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        data-target="navbarMenuHeroA" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+
+                <div id="navbarMenuHeroA" class="navbar-menu">
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                {{#unless loggedIn}}
+                                <a class="navbar-item" href="/#home">Home</a>
+                                <a class="navbar-item" href="/#about">About</a>
+                                <a class="navbar-item" href="/#creators">Creators</a>
+                                <a class="navbar-item" href="/#contact">Contact Us</a>
+                                {{/unless}}
+
+                                {{#if loggedIn}}
+                                <a class="navbar-item" href="/groups">Groups</a>
+                                <a class="navbar-item" href="/profile">Profile</a>
+
+                                <a class="button" id="logout">Logout</a>
+                                {{else}}
+                                <a class="button" href="/login">Login</a>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <main>
+        {{{body}}}
+    </main>
+    <footer>
+
+    </footer>
+
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
+    <script src="/js/navbar.js"></script>
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="/js/homepage.js"></script>
+</body>
+
+</html>

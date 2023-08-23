@@ -1,0 +1,25 @@
+<section id="group-list">
+    <div class="group-list-container">
+        {{#each groups as |group| }}
+
+        <div class="list-card">
+            <h2>
+                <a href="/groups/{{group.id}}">{{group.group_name}}</a>
+            </h2>
+            <p>
+                Study Topic: {{group.topic.topic_name}}!
+            </p>
+            <p>
+                Skill Level: {{group.skill_level}}
+            </p>
+            <p>
+                Time to Meet: {{group.meet_time}}
+            </p>
+            <p>
+                Created by: {{group.user.first_name}} {{group.user.last_name}}
+            </p>
+        </div>
+
+        {{/each}}
+    </div>
+</section>

@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+:root {
+    --bg-color: #2D3142;
+    --text-color: #d7d7d7;
+    --main-color: #1D72AA;
+    --dark-color: #2D3142;
+    --highlight-color: rgba(255, 255, 255, 0.663);
+
+}
+
+#group-list {
+  min-height: 100vh;
+}
+
+.group-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 2rem;
+    margin-top: 6rem;
+}
+.group-list-container .list-card {
+    display: flex; 
+    flex-wrap: wrap;
+   /* flex-direction: column; /* New property to orient the card content vertically */
+    /*flex-grow: 1; /* New property to make the card grow to the maximum space available */
+   /* flex-basis: 0; /* New property to set the initial main size of the flex item to 0 */
+    flex: 0 0 20rem;
+    justify-content: center;
+    background: var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 .1rem .5rem var(--highlight-color);
+    text-align: center;
+    border-top: .6rem solid var(--main-color);
+    border-bottom: .6rem solid var(--main-color);
+    transition: 0.5s ease;
+  }
+  .group-list-container .list-card:hover {
+    box-shadow: 0 0.1rem 1.5rem var(--highlight-color);
+    transform: scale(1.02);
+  }
+  .list-card i {
+    font-size: 7rem;
+    color: var(--main-color);
+  }
+  .list-card h2 {
+    font-size: 2.6rem;
+    transition: 0.5s ease;
+  }
+  .list-card a:hover {
+    color: var(--main-color);
+  }
+  .list-card p {
+    font-size: 1.3rem;
+  }
